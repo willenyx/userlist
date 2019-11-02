@@ -26,7 +26,7 @@ public class SpringConfig  {
         dataSource.setUrl("jdbc:mysql://localhost:3306/useSll = false");//
         dataSource.setUsername("root");
         dataSource.setPassword("password#");
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         return dataSource;
     }
 

@@ -202,16 +202,21 @@
             <button class="submit" type="submit">Submit</button>
         </li>
         <li>
+            <form>
 
+                    <a href=registry.ftl><button class="registry" type="button" >Registry</button></a>
+
+
+            </form>
         </li>
     </ul>
 </form>
 
 <body>
-<form  action="registry.ftl">
-<button class="registry" type="button">Registry
-</button>
-</form>
+<#--<form  action="registry.ftl">-->
+<#--<button class="registry" type="button">Registry-->
+<#--</button>-->
+<#--</form>-->
 
 </body>
 </html>

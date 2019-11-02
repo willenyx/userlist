@@ -1,24 +1,36 @@
 package am.hakobyan.entity;
 
+import org.springframework.stereotype.Component;
+
+import java.util.*;
+@Component
 public class User {
-    private int Status;
+    private int status;
     private String name;
     private String email;
     private String password;
     private String address;
     private int age;
-
+    private int tmp = 2;
 
 
     public User() {
     }
 
     public int getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(int status) {
-        Status = status;
+        /*TreeSet<Integer> set = new TreeSet<>();
+        Random numb = new Random();
+        set.add(numb.nextInt(10000));
+        int men = set.first()+tmp;
+        if (tmp>1){
+            set.contains(men);}
+        status = set.first();
+        some:tmp++;*/
+        this.status = status;
     }
 
     public String getName() {

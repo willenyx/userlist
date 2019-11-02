@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>HTML5 Contact Form</title>
+    <link rel="stylesheet" media="screen" href="styles.css" >
     <title>Title</title>
 </head>
 <body>

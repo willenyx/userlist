@@ -179,7 +179,7 @@
 
         </li>
         <li>
-            <button class="registry" type="registry">Registry</button>
+            <a href=/usersList.ftl><button class="registry" type="button" >Registry</button></a>
         </li>
 
     </ul>

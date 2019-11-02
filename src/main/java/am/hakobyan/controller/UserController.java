@@ -18,9 +18,9 @@ public class UserController {
     public UserService userService;
 
     @RequestMapping(method = RequestMethod.GET)
-    @GetMapping("/usersList")
+    @GetMapping("/login")
     public String login(){
-        return "usersList";
+        return "login";
     }
 
 
@@ -32,7 +32,7 @@ public class UserController {
 
     @GetMapping("/users")
     public String getAllUsers(Model model){
-        model.addAttribute("user",userService.showAll());
+        model.addAttribute("users",userService.showAll());
         return "usersList";
     }
 }

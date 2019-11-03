@@ -1,9 +1,9 @@
 package am.hakobyan.entity;
 
-import org.springframework.stereotype.Component;
 
-import java.util.*;
-@Component
+
+
+
 public class User {
     private int status;
     private String name;
@@ -11,7 +11,7 @@ public class User {
     private String password;
     private String address;
     private int age;
-    private int tmp = 2;
+//    private int tmp = 2;
 
 
     public User() {
@@ -21,8 +21,9 @@ public class User {
         return status;
     }
 
-    public void setStatus(int status) {
-        /*TreeSet<Integer> set = new TreeSet<>();
+    public void Status(int status) {
+        // some method to generate unique random number
+        /*TreeSet<Integer> set = new TreeSet<>();//
         Random numb = new Random();
         set.add(numb.nextInt(10000));
         int men = set.first()+tmp;

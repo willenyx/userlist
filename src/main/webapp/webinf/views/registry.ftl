@@ -163,7 +163,7 @@
         </li>
         <li >
             <label for="name">Name        :</label>
-            <input type="email" name="email" placeholder="Sebastian" required="">
+            <input type="name" name="name" placeholder="Sebastian" required="">
         </li>
         <li >
             <label for="surname">Surname: </label>
@@ -175,12 +175,14 @@
         </li>
         <li>
             <label for="password">Password:</label>
-            <input type="text" placeholder="*******" required="">
+            <input type="password" name="password" placeholder="*******" required="">
 
         </li>
         <li>
-            <a href=/usersList.ftl><button class="registry" type="button" >Registry</button></a>
+            <a href=list_of_users.ftl><button class="registry" type="button" >Registry</button></a>
         </li>
+
+
 
     </ul>
 </form>

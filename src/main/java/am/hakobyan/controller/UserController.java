@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.annotation.processing.SupportedSourceVersion;
+
 
 @Controller
 @RequestMapping("/")
@@ -30,9 +30,10 @@ public class UserController {
     }
 
 
-    @GetMapping("/users")
+    @GetMapping("/list_of_users")
     public String getAllUsers(Model model){
-        model.addAttribute("users",userService.showAll());
-        return "usersList";
+        model.addAttribute("Nairi",userService.showAll());
+//        model.addAttribute("Nairi",userService.createUser());
+        return "list_of_users";
     }
 }

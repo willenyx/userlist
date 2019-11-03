@@ -17,14 +17,14 @@
         <th>Address</th>
         <th>Age</th>
     </tr>
-    <#--<#list .current_template_name.toString() as user><tr>
-            &lt;#&ndash;<td>${user.status}</td>
+    <#list Nairi as user><tr>
+            <td>${user.status}</td>
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.address}</td>
-            <td>${user.age}</td>&ndash;&gt;
+            <td>${user.age}</td>
         </tr>
-    </#list>-->
+    </#list>
 </table>
 
 </form>

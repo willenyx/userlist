@@ -203,20 +203,14 @@
         </li>
         <li>
             <form>
-
-                    <a href=registry.ftl><button class="registry" type="button" >Registry</button></a>
-
-
+                <a href=registry.ftl><button class="registry" type="button" >Registry</button></a>
             </form>
         </li>
     </ul>
 </form>
 
 <body>
-<#--<form  action="registry.ftl">-->
-<#--<button class="registry" type="button">Registry-->
-<#--</button>-->
-<#--</form>-->
+
 
 </body>
 </html>

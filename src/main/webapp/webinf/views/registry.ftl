@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>HTML5 Contact Form</title>
-    <link rel="stylesheet" media="screen" href="styles.css" >
+    <link rel="stylesheet" media="screen"  href="styles.css">
     <style>:-moz-placeholder {
         color: blue;
     }
@@ -162,7 +162,7 @@
             <span class="required_notification">Please fill the blank below</span>
         </li>
         <li >
-            <label for="name">Name        :</label>
+            <label for="name">Name:</label>
             <input type="name" name="name" placeholder="Sebastian" required="">
         </li>
         <li >
@@ -181,9 +181,6 @@
         <li>
             <a href=list_of_users.ftl><button class="registry" type="button" >Registry</button></a>
         </li>
-
-
-
     </ul>
 </form>
 <body>

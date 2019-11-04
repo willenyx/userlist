@@ -1,8 +1,6 @@
 package am.hakobyan.entity;
 
-
-
-
+import java.util.*;
 
 public class User {
     private int status;
@@ -11,27 +9,42 @@ public class User {
     private String password;
     private String address;
     private int age;
-//    private int tmp = 2;
+    private List<Integer> list = new ArrayList<>();
 
 
     public User() {
     }
 
-    public int getStatus() {
-        return status;
+
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "status=" + status +
+                '}';
     }
 
-    public void Status(int status) {
-        // some method to generate unique random number
-        /*TreeSet<Integer> set = new TreeSet<>();//
-        Random numb = new Random();
-        set.add(numb.nextInt(10000));
-        int men = set.first()+tmp;
-        if (tmp>1){
-            set.contains(men);}
-        status = set.first();
-        some:tmp++;*/
-        this.status = status;
+
+
+
+    public void setStatus() {
+        final int range = 10_000;
+        Random random = new Random();
+        int tmp = 0;
+        boolean bool = true;
+        while (bool) {
+            tmp = random.nextInt(range);
+            while (!list.contains(tmp)) {
+                list.add(tmp);
+                status = tmp;
+                bool = false;
+            }
+        }
+    }
+
+    public int getStatus() {
+        return status;
     }
 
     public String getName() {

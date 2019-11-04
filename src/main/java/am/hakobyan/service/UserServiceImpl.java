@@ -20,9 +20,24 @@ public class UserServiceImpl implements UserService  {
         return dataAccess.showAll();
     }
 
+    @Override
+    public void createUser(User user) {
+       dataAccess.createUser(user);
+    }
+
+    @Override
+    public void update(User user) {
+        dataAccess.update(user);
+    }
     /*@Override
-    public List<User> createUser() {
-        return dataAccess.createUser();
+    public User getById(int id) {
+        return dataAccess.getById(id);
+    }
+*/
+/*
+    @Override
+    public void delete(int id) {
+        dataAccess.delete(id);
     }*/
 
 }

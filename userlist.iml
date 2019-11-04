@@ -14,5 +14,14 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/am/hakobyan/config/WebAppInitializer.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/am/hakobyan/config/SpringConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/am/hakobyan/config/WebConfig.java</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
 </module>

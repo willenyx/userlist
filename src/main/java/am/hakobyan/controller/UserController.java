@@ -1,21 +1,22 @@
 package am.hakobyan.controller;
 
+import am.hakobyan.entity.User;
 import am.hakobyan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 
 
 @Controller
 @RequestMapping("/")
 public class UserController {
-    @Autowired
-    public UserService userService;
+    public final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     @GetMapping("/login")
@@ -23,17 +24,29 @@ public class UserController {
         return "login";
     }
 
-
     @GetMapping("/registry")
-    public String registry(){
+    public String registry(User user){
+//        userService.createUser(user);
         return "registry";
     }
-
 
     @GetMapping("/list_of_users")
     public String getAllUsers(Model model){
         model.addAttribute("Nairi",userService.showAll());
-//        model.addAttribute("Nairi",userService.createUser());
         return "list_of_users";
+    }
+
+    /*@GetMapping("user/{id}")
+    public String getById(@PathVariable("id")int id,Model model){
+        model.addAttribute("Nairi",userService.getById(id));
+        return "showUser";
+    }*/
+
+
+
+    @PostMapping("/registryUser")
+    public String addUser(@ModelAttribute("user") User user){
+        userService.createUser(user);
+        return "redirect:list_of_users";
     }
 }

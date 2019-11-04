@@ -7,5 +7,8 @@ import java.util.Queue;
 
 public interface UserService {
     List<User> showAll();
-//    List<User> createUser();
+    void createUser(User user);
+//    User getById(int id);
+    void update(User user);
+//    void delete(int id);
 }

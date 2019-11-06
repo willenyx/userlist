@@ -17,18 +17,19 @@ import javax.sql.DataSource;
 public class SpringConfig  {
 
     @Bean
-    public JdbcTemplate getJdbcTemplate()  {
-        return new JdbcTemplate(getDataSource());
-
+    public UserService getUserService(){
+        return new UserServiceImpl();
     }
+
+
     @Bean
-    public DataSource getDataSource() {
+    public DataAccess getDataAccessImpl() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost:3306");//
+        dataSource.setUrl("jdbc:mysql://localhost:3306/users?userSll=false&createDatabaseIfNotExist=true");
         dataSource.setUsername("root");
         dataSource.setPassword("password#");
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        return dataSource;
+        return new DataAccessImpl(dataSource);
     }
 
 }

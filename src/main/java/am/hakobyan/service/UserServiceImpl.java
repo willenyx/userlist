@@ -12,21 +12,17 @@ import java.util.List;
 @Repository
 public class UserServiceImpl implements UserService  {
 
+    @Autowired
+    private  DataAccess dataAccess;
 
-    private final DataAccess dataAccess;
-
-    public UserServiceImpl(DataAccess dataAccess) {
-        this.dataAccess = dataAccess;
+    @Override
+    public List<User> getAll() {
+        return dataAccess.getAll();
     }
 
     @Override
-    public List<User> showAll() {
-        return dataAccess.showAll();
-    }
-
-    @Override
-    public void createUser(User user) {
-       dataAccess.createUser(user);
+    public void saveUser(User user) {
+       dataAccess.saveUser(user);
     }
 
     @Override

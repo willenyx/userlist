@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DataAccess {
 
-    List<User> showAll();
-    void createUser(User user);
+    List<User> getAll();
+    void saveUser(User user);
     void update(User user);
 }

@@ -9,29 +9,16 @@ public class User {
     private String password;
     private String address;
     private int age;
-
-    public User(List<Integer> list) {
-        this.list = list;
-    }
-
     private List<Integer> list = new ArrayList<>();
+
+
+    /*public User(List<Integer> list) {
+        this.list = list;
+    }*/
 
 
     public User() {
     }
-
-
-
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "status=" + status +
-                '}';
-    }
-
-
-
 
     public void setStatus(int tmp) {
         final int range = 10_000;

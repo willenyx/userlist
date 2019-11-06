@@ -149,7 +149,7 @@
     </style>
 </head>
 
-<form class="registry_form" action="registry.ftl" method="POST" name="registry_form "  >
+<form  action="/registry" method="POST" name="registry_form "  >
     <ul>
         <li>
             <h1>Registration Page</h1>
@@ -157,7 +157,7 @@
         </li>
         <li >
             <label for="name">Full Name:</label>
-            <input type="name" name="name" placeholder="Johny Funt" required="">
+            <input type="text" name="name" placeholder="Johny Funt" required="">
         </li>
         <li >
             <label for="address">Address: </label>

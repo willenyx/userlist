@@ -9,24 +9,28 @@
 </head>
 <body>
 <h1>Users list</h1>
-<table>
+
+<table class="tableSubHeadingColor">
     <tr>
         <th>Status</th>
         <th>Name</th>
-        <th>Email</th>
         <th>Address</th>
+        <th>Email</th>
+        <th>Password</th>
         <th>Age</th>
     </tr>
-    <#list Nairi as user><tr>
+    <#list users as user>
+        <tr>
             <td>${user.status}</td>
             <td>${user.name}</td>
-            <td>${user.email}</td>
             <td>${user.address}</td>
+            <td>${user.email}</td>
+            <td>${user.password}</td>
             <td>${user.age}</td>
         </tr>
     </#list>
 </table>
 
-</form>
+
 </body>
 </html>

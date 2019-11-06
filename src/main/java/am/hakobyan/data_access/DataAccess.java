@@ -8,8 +8,5 @@ public interface DataAccess {
 
     List<User> showAll();
     void createUser(User user);
-//    User getById(int status);
     void update(User user);
-//    void delete(int status);
-
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html  xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="utf-8">
     <title>HTML5 Contact Form</title>
-    <link rel="stylesheet" media="screen"  href="styles.css">
+    <link rel="stylesheet" media="screen"  >
     <style>:-moz-placeholder {
         color: blue;
     }
-    .registry_form input:focus, .registry_form textarea:focus { /* add this to the already existing style */
+    .registry_form input:focus, .registry_form textarea:focus {
         padding-right:70px;
     }
-    .registry_form input, .registry_form textarea { /* add this to the already existing style */
+    .registry_form input, .registry_form textarea {
         -moz-transition: padding .25s;
         -webkit-transition: padding .25s;
         -o-transition: padding .25s;
@@ -23,13 +23,10 @@
     header {font: 30px/21px "Laucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
     body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
     .registry_form h2, .registry_form label {font-family:Arial LatArm, Times, "Times New Roman", serif;}
-    .form_hint, .required_notification {font-size: 11px;}
     .registry_form ul {
         width:750px;
         list-style-type:none;
         list-style-position:outside;
-        margin:0px;
-        padding:0px;
     }
     .registry_form li{
         padding:12px;
@@ -86,12 +83,10 @@
         border-radius: 3px;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
         box-shadow: inset 0 1px 0 0 #9fd574;
         -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
         -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-        -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+
         -o-box-shadow: 0 1px 0 0 #9fd574 inset;
         color: white;
         font-weight: bold;
@@ -110,7 +105,6 @@
         box-shadow: 0 0 10px 5px #203d6b inset;
         -webkit-box-shadow:0 0 10px 5px #51416b inset ;
         -moz-box-shadow: 0 0 10px 5px #2b446b inset;
-        -ms-box-shadow: 0 0 10px 5px #2b3b6b inset;
         -o-box-shadow: 0 0 10px 5px #2e356b inset;
     }
     .registry_form input, .registry_form textarea {
@@ -119,7 +113,7 @@
     ::-webkit-validation-bubble-message {
         padding: 1em;
     }
-    .registry_form input:focus:invalid, .registry_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+    .registry_form input:focus:invalid, .registry_form textarea:focus:invalid {
         background: #fff  no-repeat 98% center;
         box-shadow: 0 0 5px #d45252;
         border-color: #b03535
@@ -155,22 +149,22 @@
     </style>
 </head>
 
-<form class="registry_form" action="" method="post" name="registry_form">
+<form class="registry_form" action="registry.ftl" method="POST" name="registry_form "  >
     <ul>
         <li>
             <h1>Registration Page</h1>
             <span class="required_notification">Please fill the blank below</span>
         </li>
         <li >
-            <label for="name">Name:</label>
-            <input type="name" name="name" placeholder="Sebastian" required="">
+            <label for="name">Full Name:</label>
+            <input type="name" name="name" placeholder="Johny Funt" required="">
         </li>
         <li >
-            <label for="surname">Surname: </label>
-            <input type="text" name="surname" placeholder="Fonte" required="">
+            <label for="address">Address: </label>
+            <input type="" name="Address" placeholder="Yerevan,Armenia" required="">
         </li>
         <li >
-            <label for="email">Email:   </label>
+            <label for="email">Email:</label>
             <input type="email" name="email" placeholder="jonatan_livingstone@example.com" required="">
         </li>
         <li>
@@ -179,7 +173,12 @@
 
         </li>
         <li>
-            <a href=list_of_users.ftl><button class="registry" type="button" >Registry</button></a>
+            <label for="age">Age:</label>
+            <input type="age" name="age"  required="">
+
+        </li>
+        <li>
+            <a href=list_of_users.ftl><button class="registry" type="submit" >Registry</button></a>
         </li>
     </ul>
 </form>

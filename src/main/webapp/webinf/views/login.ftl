@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="utf-8">
     <title>HTML5 Contact Form</title>
-    <link rel="stylesheet" media="screen" href="styles.css" >
+    <link rel="stylesheet" media="screen"  >
     <style>:-moz-placeholder {
         color: blue;
     }
@@ -22,13 +22,11 @@
     }
     body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
     .contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
-    .form_hint, .required_notification {font-size: 11px;}
+
     .contact_form ul {
         width:750px;
         list-style-type:none;
         list-style-position:outside;
-        margin:0px;
-        padding:0px;
     }
     .contact_form li{
         padding:12px;
@@ -42,11 +40,11 @@
         margin:0;
         display: inline;
     }
-    .required_notification {
+    /*.required_notification {
         color:#d45252;
         margin:5px 0 0 0;
         display: inline-block;
-    }
+    }*/
     .contact_form label {
         width:150px;
         margin-top: 3px;
@@ -85,12 +83,9 @@
         border-radius: 3px;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
         box-shadow: inset 0 1px 0 0 #9fd574;
         -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
         -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-        -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
         -o-box-shadow: 0 1px 0 0 #9fd574 inset;
         color: white;
         font-weight: bold;
@@ -199,11 +194,14 @@
 
         </li>
         <li>
-            <button class="submit" type="submit">Submit</button>
+<#--            <button class="submit" type="submit">Submit</button>-->
+            <form>
+                <a href=list_of_users.ftl><button class="submit" type="submit" >Submit</button></a>
+            </form>
         </li>
         <li>
             <form>
-                <a href=registry.ftl><button class="registry" type="button" >Registry</button></a>
+                <a href=registry.ftl><button class="submit" type="button" >Registry</button></a>
             </form>
         </li>
     </ul>

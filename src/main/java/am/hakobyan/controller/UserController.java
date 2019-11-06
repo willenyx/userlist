@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
+@ControllerAdvice
 @RequestMapping("/")
 public class UserController {
     public final UserService userService;
@@ -24,6 +25,7 @@ public class UserController {
         return "login";
     }
 
+
     @GetMapping("/registry")
     public String registry(User user){
 //        userService.createUser(user);
@@ -36,17 +38,9 @@ public class UserController {
         return "list_of_users";
     }
 
-    /*@GetMapping("user/{id}")
-    public String getById(@PathVariable("id")int id,Model model){
-        model.addAttribute("Nairi",userService.getById(id));
-        return "showUser";
-    }*/
-
-
-
-    @PostMapping("/registryUser")
+    @PostMapping("/registry")
     public String addUser(@ModelAttribute("user") User user){
-        userService.createUser(user);
+//        userService.createUser(user);
         return "redirect:list_of_users";
     }
 }

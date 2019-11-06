@@ -9,6 +9,11 @@ public class User {
     private String password;
     private String address;
     private int age;
+
+    public User(List<Integer> list) {
+        this.list = list;
+    }
+
     private List<Integer> list = new ArrayList<>();
 
 
@@ -28,16 +33,16 @@ public class User {
 
 
 
-    public void setStatus() {
+    public void setStatus(int tmp) {
         final int range = 10_000;
         Random random = new Random();
-        int tmp = 0;
+        tmp = 0;
         boolean bool = true;
         while (bool) {
             tmp = random.nextInt(range);
             while (!list.contains(tmp)) {
                 list.add(tmp);
-                status = tmp;
+                this.status = tmp;
                 bool = false;
             }
         }
